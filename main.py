@@ -1,8 +1,18 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import webbrowser
 
 
+st.title(' Pildorica de Streamlit')
+
+st.sidebar.date_input('Date input')
+st.sidebar.time_input('Time entry')
+url = 'https://github.com/rusgar/Pildora_Streamlit/'
+
+if st.sidebar.button('Github'):
+    webbrowser.open_new_tab(url)
+    
 
 DATE_TIME = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
@@ -19,8 +29,8 @@ def load_data(nrows):
 data = load_data(100000)
 
 # hour = 10
-hour = st.selectbox('selecciona la hora', range(0,24),1)
-# hour = st.slider ('selecciona la hora', 0,0,23,1)
+# hour = st.selectbox('selecciona la hora', range(0,24),1)
+hour = st.slider ('selecciona la hora', 0,24,10,1)
 data = data [data[DATE_TIME].dt.hour == hour ]
 
 if st.checkbox('Vista de datos'):

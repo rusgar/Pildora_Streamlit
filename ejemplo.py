@@ -1,15 +1,19 @@
 import streamlit as st
 
 
-st.title(' Pildoraca chunga de Streamlit')
+st.title(' Pildorica de Streamlit')
 
 with st.echo():
-    x=15
+    x=35
     
 with st.echo():
-    y=60
+    y=110
 
 with st.echo():
     z = x+y
-    st.write(z)  
+    st.write(z)
+     
+with st.echo():
+    z = x*y
+    st.write(z)
 
