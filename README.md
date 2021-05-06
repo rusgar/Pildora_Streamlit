@@ -11,7 +11,7 @@ Colocando unas barras, sidebar, o maps y hacerlos interactivos
 
 secuencia de comandos para el inicio
 
-# Pip install streamlit (inicio)
+ Pip install streamlit (inicio)
 
 
-# streamlit run  -nombre_archivo-.py (arranque del proyecto)
+streamlit run  -nombre_archivo-.py (arranque del proyecto)
